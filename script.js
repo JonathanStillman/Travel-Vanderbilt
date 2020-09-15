@@ -13,10 +13,11 @@ $("#photoButton").on("click", function (event) {
             console.log(data)
         }
     })
+    
 })
 
 /* This is where we need to find the code to append the image.  Nothing deleted just commented out
-    The above AJAX call returns 1 image with the city.  We need to display this image on line 72 in HTML
+    The above AJAX call returns 1 image with the city.  We need to display the REGULAR image on line 72 in HTML
     as the background image.  ID is #image
 
             data.results.forEach(photo => {

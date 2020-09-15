@@ -5,8 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
@@ -70,7 +69,7 @@
   </div>
 </nav>
   
-<div class="container-fluid text-center" style="background-image: url(./assets/flower.jpeg)" id="#image">    
+<div class="container-fluid text-center" style="background-image: url(./assets/flower.jpeg)" id="image">    
   <div class="row content">
     <div class="col-sm-2 sidenav text-left">
       <p><a href="#">Web Cams</a></p>
@@ -87,7 +86,8 @@
       <hr>
       <h3 style="text-align: center;"><mark>Type in your destination</mark></h3>
       <div style="text-align: center;">
-      <input class="search" id="#search" />
+      <input  id="search" placeholder="Enter a city" />
+      <button id="photoButton">Search</button>
       </div>
     </div>
     <div class="col-sm-2 sidenav">
@@ -105,5 +105,8 @@
   <p>Red Danger Productions</p>
 </footer>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

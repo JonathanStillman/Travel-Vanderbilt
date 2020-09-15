@@ -2,7 +2,8 @@ $("#photoButton").on("click", function (event) {
     event.preventDefault()
 
     var city = $("#search").val();
-    var queryURL = "https://api.unsplash.com/search/photos?query=" + city + "&client_id=ggD7ic2K_y9nlgDVyyceNQsKf8WR7hnAD4VON0PuLgg";
+    // Updated Query to only return 1 page with 1 result
+    var queryURL = "https://api.unsplash.com/search/photos?query=" + city + "&page=1&per_page=1&client_id=ggD7ic2K_y9nlgDVyyceNQsKf8WR7hnAD4VON0PuLgg";
 
 
     $.ajax({
@@ -10,22 +11,31 @@ $("#photoButton").on("click", function (event) {
         method: "GET",
         success: function (data) {
             console.log(data)
+        }
+    })
+})
+
+/* This is where we need to find the code to append the image.  Nothing deleted just commented out
+    The above AJAX call returns 1 image with the city.  We need to display this image on line 72 in HTML
+    as the background image.  ID is #image
 
             data.results.forEach(photo => {
                 $("#result").append(`
-
+                                
                     <img src="${photo.urls.regular}"/>
                 `)
             })
         }
     })
 })
-  // Enter City in input id is search
 
-  // Click search button to begin query
+*/
+  // Enter City in input id is search.......COMPLETE
 
-  // Return top image to results
+  // Click search button to begin query.......COMPLETE
 
-  // Update <div> background image to first response
+  // Return top image to results........COMPLETE
+
+  // Update <div> background image to first response........IN PROGRESS
 
 

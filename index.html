@@ -35,6 +35,13 @@
         background-color: whitesmoke;
         fill-opacity: .5;
     }
+
+    #image {
+      background-repeat: no-repeat;
+      background-position: center;
+      object-fit: cover;
+      width: 1200px;
+    }
     
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
@@ -48,6 +55,7 @@
 </head>
 <body>
 
+  <!-- NAVIGATION BAR BEGINS HERE -->
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -90,23 +98,29 @@
       <button id="photoButton">Search</button>
       </div>
     </div>
+
     <div class="col-sm-2 sidenav">
-      <div class="well">
+      <div class="well" id="yelp">
         <p>ADS</p>
       </div>
       <div class="well">
         <p>ADS</p>
       </div>
     </div>
+    
   </div>
 </div>
 
+<!-- FOOTER BEGINS HERE -->
 <footer class="container-fluid text-center">
   <p>Red Danger Productions</p>
 </footer>
 
+<!-- SCRIPTING BEGINS HERE -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="script.js"></script>
+
 </body>
+
 </html>

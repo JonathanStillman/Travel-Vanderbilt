@@ -1,127 +1,252 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="h-100">
 
 <head>
-  <title>MVP Search with Image Return</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Travel Vanderbilt</title>
 
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sticky-footer-navbar/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS STYLING BEGINS HERE -->
   <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
-    
-    /* Set gray background color and 100% height */
-    .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-    
-    /* Set black background color, white text and some padding */
-    footer {
-      
-      background-color: #555;
-      color: white;
-      padding: 15px;
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
 
-    mark   {
-        background-color: whitesmoke;
-        fill-opacity: .5;
+    .jumbotron {
+      margin-top: 10px;
+      position: relative;
     }
 
-    #image {
-      background-repeat: no-repeat;
-      background-position: center;
-      object-fit: cover;
-      width: 1200px;
+    .card {
+      box-shadow: 5px 10px 18px #888888;
     }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
+
+    #information {
+      margin-bottom: 25px;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
-      .row.content {height:auto;} 
     }
   </style>
+  <!-- STICKY FOOTER - NAV BAR CSS STYLING BEGINS HERE -->
+  <link href="sticky-footer-navbar.css" rel="stylesheet">
 </head>
 
-<body>
-
-  <!-- NAVIGATION BAR BEGINS HERE -->
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+<body class="d-flex flex-column h-100">
+  <header>
+    <!-- FIXED NAV BAR -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Travel Vanderbilt</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">Logo</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-  
-<div class="container-fluid text-center" style="background-image: url(./assets/flower.jpeg)" id="image">    
-  <div class="row content">
-    <div class="col-sm-2 sidenav text-left">
-      <p><a href="#">Web Cams</a></p>
-      <p><a href="#">Air BNB</a></p>
-      <p><a href="#">Book a Flight</a></p>
-    </div>
-    <div class="col-sm-8 text-center"> 
-      <h1><mark>Welcome to the One Stop Travel Shop!</mark></h1>
-      <p><mark>Here at Red Danger, we like to accomodate all your travel needs
-         You will find everything at your fingertips on this site.  Just search 
-         for a city you would like to travel to and we can take care of the rest!
-        </mark>
-        </p>
-      <hr>
-      <h3 style="text-align: center;"><mark>Type in your destination</mark></h3>
-      <div style="text-align: center;">
-      <input  id="search" placeholder="Enter a city" />
-      <button id="photoButton">Search</button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Information <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Find a city . . ." aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
       </div>
+    </nav>
+  </header>
+
+  <!-- PAGE CONTENT BEGINS HERE -->
+  <main role="main" class="flex-shrink-0">
+    <div class="container-fluid text-center">
+
+      <!-- JUMBOTRON INFORMATION -->
+      <div class="jumbotron">
+        <h1 class="display-4">TRAVEL VANDERBILT</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+          featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </div>
+
+      <!-- HOTEL INFORMATION BEGINS HERE -->
+      <div class="container-fluid text-center">
+        <h1 class="display-4" id="information"><b>HOTEL INFORMATION</b></h1>
+        <hr class="my-4">
+      </div>
+
+      <!-- MARRIOTT INFORMATION-->
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title"><b>MARRIOTT INTERNATIONAL</b></h3>
+              <p class="card-text">Discover more information about this iconic brand including information on our
+                executive team,
+                who are recognized throughout the industry and beyond for their leadership and vision; our commitment to
+                supporting
+                local charitable efforts around the world; and information for developers interested in adding a
+                Marriott hotel to their portfolio.</p>
+              <img src="https://www.jobstrivia.xyz/wp-content/uploads/2020/04/marriott-logo.jpg"
+                alt="Marriot Inn Logo"><br>
+              <a href="https://www.marriott.com/default.mi" class="btn btn-primary">More Information</a>
+            </div>
+          </div><br>
+        </div>
+
+        <!-- HAMPTON INN INFORMATION -->
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title"><b>HAMPTON INN</b></h3>
+              <p class="card-text">Discover more information about this iconic brand including information on our
+                executive team,
+                who are recognized throughout the industry and beyond for their leadership and vision; our commitment to
+                supporting
+                local charitable efforts around the world; and information for developers interested in adding a Hampton
+                Inn hotel to their portfolio.</p>
+              <img
+                src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0017/7414/brand.gif?itok=KEFmE3Mb"
+                alt="Hampton Inn Logo"><br>
+              <a href="https://www.hilton.com/en/hampton/" class="btn btn-primary">More Information</a>
+            </div>
+          </div><br>
+        </div>
+      </div>
+
+      <!-- HOLIDAY INN INFORMATION-->
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title"><b>HOLIDAY INN</b></h3>
+              <p class="card-text">Discover more information about this iconic brand including information on our
+                executive team,
+                who are recognized throughout the industry and beyond for their leadership and vision; our commitment to
+                supporting
+                local charitable efforts around the world; and information for developers interested in adding a Holiday
+                Inn hotel to their portfolio.</p>
+              <img
+                src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0017/8841/brand.gif?itok=TVnHgesa"
+                alt="Holiday Inn Logo"><br>
+              <a href="https://www.ihg.com/holidayinn/hotels/us/en/reservation" class="btn btn-primary">More
+                Information</a>
+            </div>
+          </div><br>
+        </div>
+
+        <!-- BEST WESTERN INFORMATION -->
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title"><b>BEST WESTERN</b></h3>
+              <p class="card-text">Discover more information about this iconic brand including information on our
+                executive team,
+                who are recognized throughout the industry and beyond for their leadership and vision; our commitment to
+                supporting
+                local charitable efforts around the world; and information for developers interested in adding a Best
+                Western hotel to their portfolio.</p>
+              <img
+                src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/012011/untitled-1_287.png?itok=GtXtS6fb"
+                alt="Best Western Logo"><br>
+              <a href="https://www.bestwestern.com/en_US.html" class="btn btn-primary">More Information</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><br><br>
+
+    <!--=================================================== NEW INFORMATION BEINGS HERE =========================================================-->
+
+    <!-- TRAVEL INFORMATION BEGINS HERE -->
+    <div class="container-fluid text-center">
+      <h1 class="display-4" id="information"><b>TRAVEL INFORMATION</b></h1>
+      <hr class="my-4"><br>
     </div>
 
-    <div class="col-sm-2 sidenav">
-      <div class="well" id="yelp">
-        <p>ADS</p>
+    <!-- PLANE INFORMATION -->
+    <div class="media">
+      <img src="https://www.iconninja.com/files/1009/547/623/air-citycons-plane-travel-icon.png"
+        class="align-self-start mr-3" alt="Plane Logo">
+      <div class="media-body">
+        <h5 class="mt-0"><b>Traveling By Plane</b></h5>
+        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio,
+          vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
+          lacinia congue felis in faucibus.</p>
+        <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et
+          magnis dis parturient montes, nascetur ridiculus mus.</p>
       </div>
-      <div class="well">
-        <p>ADS</p>
+    </div><br><br>
+
+    <!-- BUS INFORMATION -->
+    <div class="media">
+      <img src="https://www.iconninja.com/files/985/729/148/travel-bus-transport-citycons-public-icon.png"
+        class="align-self-start mr-3" alt="Bus Logo">
+      <div class="media-body">
+        <h5 class="mt-0"><b>Traveling By Bus</b></h5>
+        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio,
+          vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
+          lacinia congue felis in faucibus.</p>
+        <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et
+          magnis dis parturient montes, nascetur ridiculus mus.</p>
       </div>
+    </div><br><br>
+
+    <!-- BIKE INFORMATION -->
+    <div class="media">
+      <img src="https://www.iconninja.com/files/723/535/606/cycle-citycons-travel-city-icon.png"
+        class="align-self-start mr-3" alt="Bike Logo">
+      <div class="media-body">
+        <h5 class="mt-0"><b>Traveling By Bike</b></h5>
+        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio,
+          vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
+          lacinia congue felis in faucibus.</p>
+        <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et
+          magnis dis parturient montes, nascetur ridiculus mus.</p>
+      </div>
+    </div><br><br>
+
+    <!-- CAR INFORMATION -->
+    <div class="media">
+      <img src="https://www.iconninja.com/files/674/281/149/transport-car-road-citycons-icon.png"
+        class="align-self-start mr-3" alt="Car Logo">
+      <div class="media-body">
+        <h5 class="mt-0"><b>Traveling By Car</b></h5>
+        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio,
+          vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
+          lacinia congue felis in faucibus.</p>
+        <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et
+          magnis dis parturient montes, nascetur ridiculus mus.</p>
+      </div>
+    </div><br><br>
+  </main>
+
+  <!-- FOOTER BEGINS HERE -->
+  <footer class="footer mt-auto py-3">
+    <div class="container">
+      <span class="text-muted">Created By Travel Vanderbilt 2020</span>
     </div>
-    
-  </div>
-</div>
+  </footer>
 
-<!-- FOOTER BEGINS HERE -->
-<footer class="container-fluid text-center">
-  <p>Red Danger Productions</p>
-</footer>
-
-<!-- SCRIPTING BEGINS HERE -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="script.js"></script>
+  <!-- SCRIPTING BEGINS HERE -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

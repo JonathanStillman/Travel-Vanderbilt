@@ -9,40 +9,11 @@
   <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sticky-footer-navbar/">
 
   <!-- Bootstrap core CSS -->
-  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-  <!-- CSS STYLING BEGINS HERE -->
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
+  <link rel="stylesheet" href="style.css">
 
-    .jumbotron {
-      margin-top: 10px;
-      position: relative;
-    }
-
-    .card {
-      box-shadow: 5px 10px 18px #888888;
-    }
-
-    #information {
-      margin-bottom: 25px;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
-  <!-- STICKY FOOTER - NAV BAR CSS STYLING BEGINS HERE -->
-  <link href="sticky-footer-navbar.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/c8b5d31fd4.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -55,14 +26,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Information <span class="sr-only">(current)</span></a>
-          </li>
-        </ul>
         <form class="form-inline mt-2 mt-md-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Find a city . . ." aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <input class="form-control mr-sm-2" type="text" id="search" placeholder="Find a city . . ." aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" id="photoButton" type="submit">Search</button>
         </form>
       </div>
     </nav>
@@ -73,102 +39,106 @@
     <div class="container-fluid text-center">
 
       <!-- JUMBOTRON INFORMATION -->
-      <div class="jumbotron">
+      <div style="background-image: url(./assets/flower.jpeg)" id="image" class="jumbotron">
         <h1 class="display-4">TRAVEL VANDERBILT</h1>
         <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
           featured content or information.</p>
         <hr class="my-4">
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
       </div>
 
-      <!-- HOTEL INFORMATION BEGINS HERE -->
+      <!-- CARD LOCATION INFORMATION BEGINS HERE -->
+      <div class="places-section hide">
       <div class="container-fluid text-center">
-        <h1 class="display-4" id="information"><b>HOTEL INFORMATION</b></h1>
+        <h1 class="display-4" id="information"><b>LOCATION INFORMATION</b></h1>
         <hr class="my-4">
       </div>
 
-      <!-- MARRIOTT INFORMATION-->
+      <!-- CARD ONE INFORMATION-->
       <div class="row">
         <div class="col-sm-6">
           <div class="card">
             <div class="card-body">
-              <h3 class="card-title"><b>MARRIOTT INTERNATIONAL</b></h3>
-              <p class="card-text">Discover more information about this iconic brand including information on our
+              <h3 class="card-title-1"><b>LOCATION ONE</b></h3>
+              <h6 class="card-ranking-1"><b>rating goes here</b></h6>
+              <h6 class="card-phone-1"><b>phone number here</b></h6>
+              <!-- <p class="card-text">Discover more information about this iconic brand including information on our
                 executive team,
                 who are recognized throughout the industry and beyond for their leadership and vision; our commitment to
                 supporting
                 local charitable efforts around the world; and information for developers interested in adding a
-                Marriott hotel to their portfolio.</p>
-              <img src="https://www.jobstrivia.xyz/wp-content/uploads/2020/04/marriott-logo.jpg"
-                alt="Marriot Inn Logo"><br>
-              <a href="https://www.marriott.com/default.mi" class="btn btn-primary">More Information</a>
+                Marriott hotel to their portfolio.</p> -->
+                  <img class="img-fluid" id="card-image-1" src=""
+                  alt="">
+              <a id="card-link-1" href="" class="btn btn-primary">More Information</a>
             </div>
           </div><br>
         </div>
 
-        <!-- HAMPTON INN INFORMATION -->
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title"><b>HAMPTON INN</b></h3>
-              <p class="card-text">Discover more information about this iconic brand including information on our
-                executive team,
-                who are recognized throughout the industry and beyond for their leadership and vision; our commitment to
-                supporting
-                local charitable efforts around the world; and information for developers interested in adding a Hampton
-                Inn hotel to their portfolio.</p>
-              <img
-                src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0017/7414/brand.gif?itok=KEFmE3Mb"
-                alt="Hampton Inn Logo"><br>
-              <a href="https://www.hilton.com/en/hampton/" class="btn btn-primary">More Information</a>
-            </div>
-          </div><br>
+        <!-- CARD TWO INFORMATION -->
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title-2"><b>LOCATION TWO</b></h3>
+                <h6 class="card-ranking-2"><b>rating goes here</b></h6>
+                <h6 class="card-phone-2"><b>phone number here</b></h6>
+                <!-- <p class="card-text">Discover more information about this iconic brand including information on our
+                  executive team,
+                  who are recognized throughout the industry and beyond for their leadership and vision; our commitment to
+                  supporting
+                  local charitable efforts around the world; and information for developers interested in adding a
+                  Marriott hotel to their portfolio.</p> -->
+                    <img class="img-fluid" id="card-image-2" src=""
+                    alt="">
+                <a id="card-link-2" href="" class="btn btn-primary">More Information</a>
+              </div>
+            </div><br>
+          </div>
         </div>
-      </div>
 
-      <!-- HOLIDAY INN INFORMATION-->
+      <!-- CARD THREE INFORMATION-->
       <div class="row">
         <div class="col-sm-6">
           <div class="card">
             <div class="card-body">
-              <h3 class="card-title"><b>HOLIDAY INN</b></h3>
-              <p class="card-text">Discover more information about this iconic brand including information on our
+              <h3 class="card-title-3"><b>LOCATION THREE</b></h3>
+              <h6 class="card-ranking-3"><b>rating goes here</b></h6>
+              <h6 class="card-phone-3"><b>phone number here</b></h6>
+              <!-- <p class="card-text">Discover more information about this iconic brand including information on our
                 executive team,
                 who are recognized throughout the industry and beyond for their leadership and vision; our commitment to
                 supporting
-                local charitable efforts around the world; and information for developers interested in adding a Holiday
-                Inn hotel to their portfolio.</p>
-              <img
-                src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0017/8841/brand.gif?itok=TVnHgesa"
-                alt="Holiday Inn Logo"><br>
-              <a href="https://www.ihg.com/holidayinn/hotels/us/en/reservation" class="btn btn-primary">More
-                Information</a>
+                local charitable efforts around the world; and information for developers interested in adding a
+                Marriott hotel to their portfolio.</p> -->
+                  <img class="img-fluid" id="card-image-3" src=""
+                  alt="">
+              <a id="card-link-3" href="" class="btn btn-primary">More Information</a>
             </div>
           </div><br>
         </div>
 
-        <!-- BEST WESTERN INFORMATION -->
+        <!-- CARD FOUR INFORMATION -->
         <div class="col-sm-6">
           <div class="card">
             <div class="card-body">
-              <h3 class="card-title"><b>BEST WESTERN</b></h3>
-              <p class="card-text">Discover more information about this iconic brand including information on our
+              <h3 class="card-title-4"><b>LOCATION FOUR</b></h3>
+              <h6 class="card-ranking-4"><b>rating goes here</b></h6>
+              <h6 class="card-phone-4"><b>phone number here</b></h6>
+              <!-- <p class="card-text">Discover more information about this iconic brand including information on our
                 executive team,
                 who are recognized throughout the industry and beyond for their leadership and vision; our commitment to
                 supporting
-                local charitable efforts around the world; and information for developers interested in adding a Best
-                Western hotel to their portfolio.</p>
-              <img
-                src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/012011/untitled-1_287.png?itok=GtXtS6fb"
-                alt="Best Western Logo"><br>
-              <a href="https://www.bestwestern.com/en_US.html" class="btn btn-primary">More Information</a>
+                local charitable efforts around the world; and information for developers interested in adding a
+                Marriott hotel to their portfolio.</p> -->
+                  <img class="img-fluid" id="card-image-4" src=""
+                  alt="">
+              <a id="card-link-4" href="" class="btn btn-primary">More Information</a>
             </div>
-          </div>
+          </div><br>
         </div>
       </div>
-    </div><br><br>
-
+      </div>
+      
     <!--=================================================== NEW INFORMATION BEINGS HERE =========================================================-->
 
     <!-- TRAVEL INFORMATION BEGINS HERE -->
@@ -245,8 +215,15 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
-  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script> -->
+  <!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
 
 </body>
 

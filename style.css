@@ -1,0 +1,21 @@
+.container {
+    /* max-width: 100%;
+    height: auto; */
+}
+
+.streetview {
+background-color: pink;
+height: 250px;
+}
+
+.flights {
+background-color: orange;
+height: 250px;
+
+}
+
+.airbnb {
+background-color: yellow;
+height: 500px;
+
+}

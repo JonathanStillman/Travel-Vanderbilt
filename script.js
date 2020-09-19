@@ -1,3 +1,9 @@
+const cardURL = document.getElementById('cardURL');
+const cardImage = document.getElementById('cardImage');
+
+
+
+
 $("#photoButton").on("click", function (event) {
     event.preventDefault()
 
@@ -26,6 +32,13 @@ $("#photoButton").on("click", function (event) {
         headers: { "Authorization": "Bearer MJ5-bJhkCujBxJVttLJ0vxzLgs5ge3wRewkDm32IiqjBo69dYZkqZ-oz679UL0x0bTYNRiJHmfBO1JXrB8W7b4djrkYhgMFUgpRmcdhcy4NMbz7SSqbEhpeDo8NiX3Yx" },
         success: function (data) {
             console.log(data)
+            console.log(data.businesses[0].name);
+            console.log(data.businesses[0].rating);
+            console.log(data.businesses[0].image_url);
+            console.log(data.businesses[0].url);
+            console.log(data.businesses[0].display_phone);
+            $(cardURL).attr("href", data.businesses[0].url);
+            $(cardImage).attr("src", data.businesses[0].image_url);
         }
     });
 })

@@ -6,7 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Travel Vanderbilt</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Raleway+Dots&display=swap" rel="stylesheet">
+
   <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sticky-footer-navbar/">
+
+  <!-- Algolia Places API -->
+
+  <script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0"></script>
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -25,10 +31,15 @@
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+
       <div class="collapse navbar-collapse" id="navbarCollapse">
+
         <form class="form-inline mt-2 mt-md-0">
-          <input class="form-control mr-sm-2" type="text" id="search" placeholder="Find a city . . ." aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" id="photoButton" type="submit">Search</button>
+          <div class="input-group-prepend">
+          <input class="form-control mr-sm-4" type="text" id="address" placeholder="Find a city . . ." aria-label="Search">
+          <button class="btn btn-outline-secondary my-2 my-sm-0" id="photoButton" type="submit">Search</button>
+        </div>       
         </form>
       </div>
     </nav>
@@ -40,11 +51,7 @@
 
       <!-- JUMBOTRON INFORMATION -->
       <div style="background-image: url(./assets/flower.jpeg)" id="image" class="jumbotron">
-        <h1 class="display-4">TRAVEL VANDERBILT</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-          featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <h1 class="display-4" id="page-title">Travel Vanderbilt</h1>
       </div>
 
       <!-- CARD LOCATION INFORMATION BEGINS HERE -->
@@ -62,12 +69,6 @@
               <h3 class="card-title-1"><b>LOCATION ONE</b></h3>
               <h6 class="card-ranking-1"><b>rating goes here</b></h6>
               <h6 class="card-phone-1"><b>phone number here</b></h6>
-              <!-- <p class="card-text">Discover more information about this iconic brand including information on our
-                executive team,
-                who are recognized throughout the industry and beyond for their leadership and vision; our commitment to
-                supporting
-                local charitable efforts around the world; and information for developers interested in adding a
-                Marriott hotel to their portfolio.</p> -->
                   <img class="img-fluid" id="card-image-1" src=""
                   alt="">
               <a id="card-link-1" href="" class="btn btn-primary">More Information</a>
@@ -82,12 +83,6 @@
                 <h3 class="card-title-2"><b>LOCATION TWO</b></h3>
                 <h6 class="card-ranking-2"><b>rating goes here</b></h6>
                 <h6 class="card-phone-2"><b>phone number here</b></h6>
-                <!-- <p class="card-text">Discover more information about this iconic brand including information on our
-                  executive team,
-                  who are recognized throughout the industry and beyond for their leadership and vision; our commitment to
-                  supporting
-                  local charitable efforts around the world; and information for developers interested in adding a
-                  Marriott hotel to their portfolio.</p> -->
                     <img class="img-fluid" id="card-image-2" src=""
                     alt="">
                 <a id="card-link-2" href="" class="btn btn-primary">More Information</a>
@@ -104,12 +99,6 @@
               <h3 class="card-title-3"><b>LOCATION THREE</b></h3>
               <h6 class="card-ranking-3"><b>rating goes here</b></h6>
               <h6 class="card-phone-3"><b>phone number here</b></h6>
-              <!-- <p class="card-text">Discover more information about this iconic brand including information on our
-                executive team,
-                who are recognized throughout the industry and beyond for their leadership and vision; our commitment to
-                supporting
-                local charitable efforts around the world; and information for developers interested in adding a
-                Marriott hotel to their portfolio.</p> -->
                   <img class="img-fluid" id="card-image-3" src=""
                   alt="">
               <a id="card-link-3" href="" class="btn btn-primary">More Information</a>
@@ -124,12 +113,6 @@
               <h3 class="card-title-4"><b>LOCATION FOUR</b></h3>
               <h6 class="card-ranking-4"><b>rating goes here</b></h6>
               <h6 class="card-phone-4"><b>phone number here</b></h6>
-              <!-- <p class="card-text">Discover more information about this iconic brand including information on our
-                executive team,
-                who are recognized throughout the industry and beyond for their leadership and vision; our commitment to
-                supporting
-                local charitable efforts around the world; and information for developers interested in adding a
-                Marriott hotel to their portfolio.</p> -->
                   <img class="img-fluid" id="card-image-4" src=""
                   alt="">
               <a id="card-link-4" href="" class="btn btn-primary">More Information</a>
@@ -152,10 +135,8 @@
       <img src="https://www.iconninja.com/files/1009/547/623/air-citycons-plane-travel-icon.png"
         class="align-self-start mr-3" alt="Plane Logo">
       <div class="media-body">
-        <h5 class="mt-0"><b>Traveling By Plane</b></h5>
-        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio,
-          vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
-          lacinia congue felis in faucibus.</p>
+        <h5 class="mt-0 small-header"><b>Traveling By Plane</b></h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit vehicula justo. Mauris sit amet magna sit amet lectus vehicula volutpat. Aliquam erat volutpat. Donec quam odio, tristique eu efficitur ut, imperdiet vel odio. Duis et urna nec velit dapibus gravida eleifend quis risus</p>
         <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et
           magnis dis parturient montes, nascetur ridiculus mus.</p>
       </div>
@@ -166,10 +147,8 @@
       <img src="https://www.iconninja.com/files/985/729/148/travel-bus-transport-citycons-public-icon.png"
         class="align-self-start mr-3" alt="Bus Logo">
       <div class="media-body">
-        <h5 class="mt-0"><b>Traveling By Bus</b></h5>
-        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio,
-          vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
-          lacinia congue felis in faucibus.</p>
+        <h5 class="mt-0 small-header"><b>Traveling By Bus</b></h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit vehicula justo. Mauris sit amet magna sit amet lectus vehicula volutpat. Aliquam erat volutpat. Donec quam odio, tristique eu efficitur ut, imperdiet vel odio. Duis et urna nec velit dapibus gravida eleifend quis risus</p>
         <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et
           magnis dis parturient montes, nascetur ridiculus mus.</p>
       </div>
@@ -180,10 +159,8 @@
       <img src="https://www.iconninja.com/files/723/535/606/cycle-citycons-travel-city-icon.png"
         class="align-self-start mr-3" alt="Bike Logo">
       <div class="media-body">
-        <h5 class="mt-0"><b>Traveling By Bike</b></h5>
-        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio,
-          vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
-          lacinia congue felis in faucibus.</p>
+        <h5 class="mt-0 small-header"><b>Traveling By Bike</b></h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit vehicula justo. Mauris sit amet magna sit amet lectus vehicula volutpat. Aliquam erat volutpat. Donec quam odio, tristique eu efficitur ut, imperdiet vel odio. Duis et urna nec velit dapibus gravida eleifend quis risus</p>
         <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et
           magnis dis parturient montes, nascetur ridiculus mus.</p>
       </div>
@@ -194,10 +171,8 @@
       <img src="https://www.iconninja.com/files/674/281/149/transport-car-road-citycons-icon.png"
         class="align-self-start mr-3" alt="Car Logo">
       <div class="media-body">
-        <h5 class="mt-0"><b>Traveling By Car</b></h5>
-        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio,
-          vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
-          lacinia congue felis in faucibus.</p>
+        <h5 class="mt-0 small-header"><b>Traveling By Car</b></h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit vehicula justo. Mauris sit amet magna sit amet lectus vehicula volutpat. Aliquam erat volutpat. Donec quam odio, tristique eu efficitur ut, imperdiet vel odio. Duis et urna nec velit dapibus gravida eleifend quis risus</p>
         <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et
           magnis dis parturient montes, nascetur ridiculus mus.</p>
       </div>

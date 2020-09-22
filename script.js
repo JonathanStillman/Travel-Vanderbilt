@@ -1,12 +1,34 @@
-// const cardURL = document.getElementById('cardURL');
-// const cardImage = document.getElementById('cardImage');
+    // Algolia places API //
+
+    $(document).ready(function(){
+
+        (function() {
+        var placesAutocomplete = places({
+        appId: 'plN7IU9KL60M',
+        apiKey: '7dbf0d051f67734266786c8810950b69',
+        container: document.querySelector('#address'),
+        templates: {
+            value: function(suggestion) {
+            return suggestion.name;
+            }
+        }
+        }).configure({
+        type: 'city',
+        aroundLatLngViaIP: false,
+    });
+
+    })();
+    
+    });
 
 
 $("#photoButton").on("click", function (event) {
     event.preventDefault()
-    var city = $("#search").val();
+    var city = $("#address").val();
     var queryURL = "https://api.unsplash.com/search/photos?query=" + city + "&page=1&per_page=1&client_id=ggD7ic2K_y9nlgDVyyceNQsKf8WR7hnAD4VON0PuLgg";
     $(".places-section").removeClass("hide")
+
+    $("#information").text(city + " Information");
 
     $.ajax({
         url: queryURL,
@@ -57,23 +79,18 @@ $("#photoButton").on("click", function (event) {
             $("#card-link-3").attr("href", data.businesses[2].url);
 
              // Card Four //
-             $(".card-title-4").text(data.businesses[3].name);
-             $("#card-image-4").attr("src", data.businesses[3].image_url);
-             $(".card-ranking-4").html("<i class=\"far fa-star\"></i> rating: " + data.businesses[3].rating);
-             $(".card-phone-4").html("<i class=\"fas fa-mobile-alt\"></i> " + data.businesses[3].display_phone);
-             $("#card-link-4").attr("href", data.businesses[3].url);
+            $(".card-title-4").text(data.businesses[3].name);
+            $("#card-image-4").attr("src", data.businesses[3].image_url);
+            $(".card-ranking-4").html("<i class=\"far fa-star\"></i> rating: " + data.businesses[3].rating);
+            $(".card-phone-4").html("<i class=\"fas fa-mobile-alt\"></i> " + data.businesses[3].display_phone);
+            $("#card-link-4").attr("href", data.businesses[3].url);
 
         }
     });
 })
 
-// Enter City in input id is search.......COMPLETE
 
-// Click search button to begin query.......COMPLETE
 
-// Return top image to results........COMPLETE
-
-// Update <div> background image to first response........IN PROGRESS
 
 
 // API KEY (YELP): MJ5-bJhkCujBxJVttLJ0vxzLgs5ge3wRewkDm32IiqjBo69dYZkqZ-oz679UL0x0bTYNRiJHmfBO1JXrB8W7b4djrkYhgMFUgpRmcdhcy4NMbz7SSqbEhpeDo8NiX3Yx

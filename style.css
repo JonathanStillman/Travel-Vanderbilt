@@ -29,22 +29,24 @@ height: 500px;
 
 
 .bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .jumbotron {
     margin-top: 10px;
     position: relative;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1em;
 }
 
-/* .display-4, .lead, .my-4 {
-    color: white;
-} */
+#page-title, #paragraph-1, #paragraph-2 {
+    background: rgba(255, 255, 255, 0.3);
+}
 
 .card {
     box-shadow: 5px 10px 18px #888888;
@@ -52,6 +54,11 @@ height: 500px;
 
 #information {
     margin-bottom: 25px;
+    font-family: 'Raleway Dots', cursive;
+}
+
+.small-header {
+    font-family: 'Raleway Dots', cursive;
 }
 
 @media (min-width: 768px) {
@@ -85,4 +92,25 @@ code {
 
 .hide {
     display: none;
+}
+
+#address {
+    width: 300px;
+    margin: 10px;
+}
+
+#photoButton {
+    float: right;
+}
+
+.card {
+    height: 500px;
+}
+
+#image {
+    height: 500px;
+}
+
+button.ap-input-icon {
+    margin-right: 15px;
 }
